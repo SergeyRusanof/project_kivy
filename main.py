@@ -1,3 +1,9 @@
+'''
+Приложение "Список".
+ Предназначено для удобного составления списка покупок
+'''
+
+
 from kivy.app import App
 from kivy.properties import ColorProperty
 from kivy.uix.button import Button
