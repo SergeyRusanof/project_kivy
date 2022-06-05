@@ -11,13 +11,19 @@ Config.set('graphics', 'height', 610)
 
 
 class ShopListApp(App):
+    def choise_pay(self, instance):
     def build(self):
-        box = BoxLayout(orientation='vertical', size_hint=[1, .40])
-        box.add_widget(Label(text="Приветик) тут будет список", size_hint=[1, .40]))
-        icons = GridLayout(rows=5, padding=2, size_hint=[1, .60])
 
+        box = BoxLayout(orientation='vertical', padding=2)
+        icons = GridLayout(rows=5, padding=2, spacing=1, size_hint=[1, .50])
+        box.add_widget(Label(text="Приветик) тут будет список",
+                             text_size=(294, 605 * .5), font_size=14,
+                             size_hint=[1, .50],
+                             halign='left',
+                             valign='top'))
         for i in range(20):
-            icons.add_widget(Button(background_color=[.20, .35, .25, 1]))
+            icons.add_widget(Button(background_color=[.20, .35, .25, 1], on_press = self.choise_pay))
+        box.add_widget(icons)
         return box
 
 
