@@ -6,18 +6,14 @@ from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.image import Image
 
+
 # Config.set('graphics', 'resizable', '0')
 Config.set('graphics', 'width', 300)
 Config.set('graphics', 'height', 610)
 
 
-class ListLook(BoxLayout):
+class Container(BoxLayout):
     pass
-
-
-class IconPay(GridLayout):
-    pass
-
 
 class ShopListApp(App):
     def update_label(self):
@@ -37,44 +33,28 @@ class ShopListApp(App):
                            halign='left',
                            valign='top')
         box.add_widget(self.label)
-        icons.add_widget(
-            Button(text='Хлеб', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Мясо', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Яйца', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Йогурты', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Хлеб', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Мясо',  background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Яйца',  background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Йогурты',  background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
 
-        icons.add_widget(
-            Button(text='Чай', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Печенье', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Приправы', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Картошка', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Чай', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Печенье', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Приправы', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Картошка', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
 
-        icons.add_widget(
-            Button(text='Крупы', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Макароны', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Помидоры', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Лук', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Крупы', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Макароны', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Помидоры', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Лук', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
 
-        icons.add_widget(
-            Button(text='Рыба', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Соки', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Шоколадка', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
-        icons.add_widget(
-            Button(text='Капуста', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Рыба', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Соки', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Шоколадка', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
+        icons.add_widget(Button(text='Капуста', background_color=[.20, .35, .25, 1], font_size=13, on_press=self.choice_pay))
 
         box.add_widget(icons)
-        return Container
+        return box
 
 
 if __name__ == "__main__":
