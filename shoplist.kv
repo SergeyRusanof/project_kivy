@@ -2,20 +2,30 @@
 
 <Container>:
     BoxLayout
-        orientation:'vertical'
-        padding: 2
-        Button:
-            text:'list'
-    BoxLayout
-        orientation:'vertical'
-        padding: 2
-        Button:
-            text:'how_match'
-    BoxLayout
-        orientation:'vertical'
-        padding: 2
-        Button:
-            text:'check'
+        padding:10
+        spacing:5
+
+        BoxLayout
+            orientation:'vertical'
+            size_hint: 1, 0.7
+            pos_hint: {'center_x':0, 'center_y':0.8}
+            padding: 2
+            Button:
+                text:'list'
+        BoxLayout
+            orientation:'vertical'
+            size_hint: 0.15, 0.7
+            pos_hint: {'center_x':0, 'center_y':0.8}
+            padding: 2
+            Button:
+                text:'h'
+        BoxLayout
+            orientation:'vertical'
+            size_hint: 0.15, 0.7
+            pos_hint: {'center_x':0, 'center_y':0.8}
+            padding: 2
+            Button:
+                text:'ch'
 
 
 
