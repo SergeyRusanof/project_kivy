@@ -11,7 +11,7 @@ Config.set('graphics', 'width', 300)
 Config.set('graphics', 'height', 610)
 
 
-class Container(BoxLayout):
+class Container(GridLayout):
     pass
 
 
