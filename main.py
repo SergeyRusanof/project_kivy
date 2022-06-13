@@ -15,6 +15,7 @@ class Container(GridLayout):
     pass
 
 
+
 class ShopListApp(App):
     def update_label(self):
         self.label.text = self.inlist
