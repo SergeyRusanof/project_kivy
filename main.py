@@ -1,11 +1,13 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.checkbox import CheckBox
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
 from kivy.uix.scrollview import ScrollView
+
 Window.size = (300, 610)
 
 
@@ -24,25 +26,18 @@ class ShopListApp(App):
     def build(self):
         self.inlist = ''
         main_block = GridLayout(rows=3, padding=5)
-        top_block = BoxLayout(orientation='horizontal', size_hint=[1,.45])
-        amount = Label(text='am', size_hint=[.15, 1])
-        check_box = Label(text='ch', size_hint=[.15, 1])
-        menu = BoxLayout(orientation='horizontal', size_hint=[.05,.05])
-        bottom_block = GridLayout(rows=5, size_hint=[1,.45])
-        self.show = TextInput(readonly=True, font_size='13')
-        scroll = ScrollView(size='')
+        top_block = BoxLayout(orientation='horizontal', size_hint=[1, .47])
+        menu = BoxLayout(orientation='horizontal', size_hint=[.03, .03])
+        bottom_block = GridLayout(rows=5, size_hint=[1, .47])
+        self.show = TextInput(readonly=True, font_size='13', line_spacing='1', padding=[10, 1, 0, 1])
+        self.show2 = TextInput( font_size='13', padding=[10, 1, 0, 1])
 
-        self.show.add_widget(scroll)
         top_block.add_widget(self.show)
-        top_block.add_widget(amount)
-        top_block.add_widget(check_box)
+        top_block.add_widget(self.show2)
         main_block.add_widget(top_block)
         main_block.add_widget(menu)
         main_block.add_widget(bottom_block)
 
-        menu.add_widget(Button(text='Продукты', font_size='11'))
-        menu.add_widget(Button(text='Быт.хим.', font_size='11'))
-        menu.add_widget(Button(text='Разное', font_size='11'))
         menu.add_widget(Button(text='Стереть', font_size='11', on_press=self.clean))
 
         bottom_block.add_widget(Button(text='хлеб\n', font_size='12', on_press=self.choice_pay))
