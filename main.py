@@ -1,13 +1,12 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.checkbox import CheckBox
 from kivy.uix.gridlayout import GridLayout
-from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
-from kivy.uix.scrollview import ScrollView
+from kivy.config import Config
 
+Config.set('kivy', 'keyboard_mode', 'systemanddock')
 Window.size = (300, 610)
 
 
@@ -30,7 +29,7 @@ class ShopListApp(App):
         menu = BoxLayout(orientation='horizontal', size_hint=[.03, .03])
         bottom_block = GridLayout(rows=5, size_hint=[1, .47])
         self.show = TextInput(readonly=True, font_size='13', line_spacing='1', padding=[10, 1, 0, 1])
-        self.show2 = TextInput( font_size='13', padding=[10, 1, 0, 1])
+        self.show2 = TextInput( font_size='13', padding=[10, 1, 2, 1])
 
         top_block.add_widget(self.show)
         top_block.add_widget(self.show2)
